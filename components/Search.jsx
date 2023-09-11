@@ -13,7 +13,7 @@ const Search = () => {
     e.preventDefault();
     if (searchTerm) {
       const response = await axios.get(
-        `http://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}&s=${searchTerm}`
+        `https://www.omdbapi.com/?apikey=${process.env.NEXT_PUBLIC_OMDB_API_KEY}&s=${searchTerm}`
       );
       setMovies(response.data.Search);
       setSearchTerm('');
